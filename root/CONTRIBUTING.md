@@ -6,9 +6,6 @@ Please don't edit files in the `lib` subdirectory as they are generated via Grun
 ### Code style
 Regarding code style like indentation and whitespace, **follow the conventions you see used in the source already.**
 
-### Test
-
-
 ## Modifying the code
 First, ensure that you have the latest [Node.js](http://nodejs.org/) and [npm](http://npmjs.org/) installed.
 
