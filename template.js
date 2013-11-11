@@ -9,7 +9,7 @@
 'use strict';
 
 // Basic template description.
-exports.description = 'Create a Node.js module, including Nodeunit unit tests.';
+exports.description = 'Create a Node.js module, including Coffeescript development and Jasmine unit tests.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '_Project name_ shouldn\'t contain "node" or "js" and should ' +
@@ -43,7 +43,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
-    init.prompt('npm_test', 'grunt nodeunit'),
+    init.prompt('npm_test', 'grunt test'),
     {
       name: 'travis',
       message: 'Will this project be tested with Travis CI?',
@@ -53,9 +53,14 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.devDependencies = {
-      'grunt-contrib-jshint': '~0.6.4',
-      'grunt-contrib-nodeunit': '~0.2.0',
+      'grunt-bump': '~0.0.11',
+      'grunt-coffeelint': '~0.0.7',
+      'grunt-contrib-clean': '~0.5.0',
+      'grunt-contrib-coffee': '~0.7.0',
+      'grunt-contrib-concat': '~0.3.0',
       'grunt-contrib-watch': '~0.5.3',
+      'grunt-shell': '~0.5.0',
+      "jasmine-node": "~1.11.0"
     };
     props.travis = /y/i.test(props.travis);
 
