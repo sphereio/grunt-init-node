@@ -25,3 +25,6 @@ Assuming that you don't see any red, you're ready to go. Just be sure to run `gr
 1. Run `grunt test` to see if the tests pass. Repeat steps 2-4 until done.
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
+
+## Styleguide
+We <3 CoffeeScript! So please have a look at this referenced [coffeescript styleguide](https://github.com/polarmobile/coffeescript-style-guide) when doing changes to the code.

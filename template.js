@@ -43,7 +43,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
-    init.prompt('npm_test', 'grunt test'),
+    init.prompt('npm_test', 'grunt coverage'),
     {
       name: 'travis',
       message: 'Will this project be tested with Travis CI?',
@@ -53,14 +53,17 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.devDependencies = {
+      'coveralls': '~2.6.1',
+      'grunt': '~0.4.1',
       'grunt-bump': '~0.0.11',
       'grunt-coffeelint': '~0.0.7',
       'grunt-contrib-clean': '~0.5.0',
-      'grunt-contrib-coffee': '~0.7.0',
+      'grunt-contrib-coffee': '~0.8.2',
       'grunt-contrib-concat': '~0.3.0',
       'grunt-contrib-watch': '~0.5.3',
-      'grunt-shell': '~0.5.0',
-      "jasmine-node": "~1.11.0"
+      'grunt-shell': '~0.6.2',
+      'istanbul': '~0.2.3',
+      'jasmine-node': '~1.13.0'
     };
     props.travis = /y/i.test(props.travis);
 
