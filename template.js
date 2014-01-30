@@ -41,7 +41,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
-    init.prompt('node_version', '>= 0.8.0'),
+    init.prompt('node_version', '>= 0.10.0'),
     init.prompt('main'),
     init.prompt('npm_test', 'grunt coverage'),
     {
@@ -50,6 +50,12 @@ exports.template = function(grunt, init, done) {
       default: 'Y/n',
       warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
     },
+    {
+      name: 'coveralls',
+      message: 'Will this project show test coverage history and statistics with Coveralls.io?',
+      default: 'Y/n',
+      warning: 'If selected, you must enable Coveralls.io support for this project in https://coveralls.io/repos'
+    }
   ], function(err, props) {
     props.keywords = [];
     props.dependencies = {
