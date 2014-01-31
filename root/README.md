@@ -9,10 +9,33 @@
 ## Getting Started
 Install the module with: `npm install {%= name %}`
 
-```javascript
-var {%= js_safe_name %} = require('{%= name %}');
-{%= js_safe_name %}.awesome(); // "awesome"
-```
+## Setup
+
+* create `config.js`
+  * make `create_config.sh`executable
+
+    ```
+    chmod +x create_config.sh
+    ```
+  * run script to generate `config.js`
+
+    ```
+    ./create_config.sh
+    ```
+* install travis gem `gem install travis`
+* add encrpyted keys to `.travis.yml`
+ * add sphere project credentials to `.travis.yml`
+
+        ```
+        travis encrypt [xxx] --add SPHERE_PROJECT_KEY
+        travis encrypt [xxx] --add SPHERE_CLIENT_ID
+        travis encrypt [xxx] --add SPHERE_CLIENT_SECRET
+        ```
+  * add hipchat credentials to `.travis.yml`
+  
+        ```
+        travis encrypt [xxx]@Sphere --add notifications.hipchat.rooms
+        ````
 
 ## Documentation
 _(Coming soon)_
