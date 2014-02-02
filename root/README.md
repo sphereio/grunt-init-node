@@ -22,6 +22,7 @@ Install the module with: `npm install {%= name %}`
     ```
     ./create_config.sh
     ```
+* configure github/hipchat integration (see project *settings* in guthub)
 * install travis gem `gem install travis`
 * add encrpyted keys to `.travis.yml`
  * add sphere project credentials to `.travis.yml`
@@ -35,10 +36,18 @@ Install the module with: `npm install {%= name %}`
   
         ```
         travis encrypt [xxx]@Sphere --add notifications.hipchat.rooms
-        ````
+        ```
 
 ## Documentation
 _(Coming soon)_
+
+## Tests
+Tests are written using [jasmine](http://pivotal.github.io/jasmine/) (behavior-driven development framework for testing javascript code). Thanks to [jasmine-node](https://github.com/mhevery/jasmine-node), this test framework is also available for node.js.
+
+To run tests, simple execute the *test* task using `grunt`.
+```bash
+$ grunt test
+```
 
 ## Examples
 _(Coming soon)_
