@@ -56,6 +56,9 @@ grunt release:minor // minor release
 grunt release:major // major release
 ```
 
+## Styleguide
+We <3 CoffeeScript here at commercetools! So please have a look at this referenced [coffeescript styleguide](https://github.com/polarmobile/coffeescript-style-guide) when doing changes to the code.
+
 ## License
 Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
 Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
