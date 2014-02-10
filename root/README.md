@@ -1,5 +1,4 @@
 # {%= name %}
-============================
 
 {% if (travis) { %}[![Build Status](https://secure.travis-ci.org/{%= git_user %}/{%= git_repo %}.png?branch=master)](http://travis-ci.org/{%= git_user %}/{%= git_repo %}){% } %}{% if (coveralls) { %}[![Coverage Status](https://coveralls.io/repos/{%= git_user %}/{%= git_repo %}/badge.png)](https://coveralls.io/r/{%= git_user %}/{%= git_repo %})%}){% } %}[![Dependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %})[![devDependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}/dev-status.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %}#info=devDependencies)
 
@@ -9,42 +8,15 @@
 ## Getting Started
 Install the module with: `npm install {%= name %}`
 
-## Setup
-
-* create `config.js`
-  * make `create_config.sh`executable
-
-    ```
-    chmod +x create_config.sh
-    ```
-  * run script to generate `config.js`
-
-    ```
-    ./create_config.sh
-    ```
-* configure github/hipchat integration (see project *settings* in guthub)
-* install travis gem `gem install travis`
-* add encrpyted keys to `.travis.yml`
- * add sphere project credentials to `.travis.yml`
-
-        ```
-        travis encrypt [xxx] --add SPHERE_PROJECT_KEY
-        travis encrypt [xxx] --add SPHERE_CLIENT_ID
-        travis encrypt [xxx] --add SPHERE_CLIENT_SECRET
-        ```
-  * add hipchat credentials to `.travis.yml`
-  
-        ```
-        travis encrypt [xxx]@Sphere --add notifications.hipchat.rooms
-        ```
 
 ## Documentation
 _(Coming soon)_
 
 ## Tests
-Tests are written using [jasmine](http://pivotal.github.io/jasmine/) (behavior-driven development framework for testing javascript code). Thanks to [jasmine-node](https://github.com/mhevery/jasmine-node), this test framework is also available for node.js.
+Tests are written using [jasmine](http://pivotal.github.io/jasmine/) (Behavior-Driven Development framework for testing javascript code). Thanks to [jasmine-node](https://github.com/mhevery/jasmine-node), this test framework is also available for Node.js.
 
 To run tests, simple execute the *test* task using `grunt`.
+
 ```bash
 $ grunt test
 ```

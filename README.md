@@ -1,4 +1,4 @@
-sphere-grunt-init 
+sphere-grunt-init
 =================
 
 This is a project template used for creating sphere node modules using [grunt-init](http://gruntjs.com/project-scaffolding) (scaffolding tool used to automate project creation).
@@ -29,3 +29,24 @@ grunt-init ~/dev/src/sphere-grunt-init
 ```
 
 _Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
+
+
+## Project Setup
+
+* create `config.js` by running `./create_config.sh`
+  * add credentials (used only in local development)
+* configure github/hipchat integration (see project *settings* in github)
+* install travis gem `gem install travis`
+* add encrpyted keys to `.travis.yml`
+  * sphere project credentials
+
+    ```bash
+    travis encrypt [xxx] --add SPHERE_PROJECT_KEY
+    travis encrypt [xxx] --add SPHERE_CLIENT_ID
+    travis encrypt [xxx] --add SPHERE_CLIENT_SECRET
+    ```
+  * hipchat notifications
+
+    ```bash
+    travis encrypt [xxx]@Sphere --add notifications.hipchat.rooms
+    ```
