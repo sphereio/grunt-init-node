@@ -60,23 +60,23 @@ exports.template = function(grunt, init, done) {
     props.keywords = [];
     props.dependencies = {
       "optimist": "0.6.0",
-      "underscore": "~1.5.2",
+      "underscore": "~1.6.0",
       "underscore.string": "2.3.3",
       "q": "~1.0.0"
     };
     props.devDependencies = {
-      "coveralls": "~2.6.1",
-      "grunt": "~0.4.1",
-      "grunt-bump": "~0.0.11",
-      "grunt-cli": "~0.1.9",
-      "grunt-coffeelint": "~0.0.7",
+      "coveralls": "~2.7.1",
+      "grunt": "~0.4.2",
+      "grunt-bump": "~0.0.13",
+      "grunt-cli": "~0.1.13",
+      "grunt-coffeelint": "~0.0.8",
       "grunt-contrib-clean": "~0.5.0",
-      "grunt-contrib-coffee": "~0.8.2",
+      "grunt-contrib-coffee": "~0.10.0",
       "grunt-contrib-concat": "~0.3.0",
       "grunt-contrib-watch": "~0.5.3",
-      "grunt-shell": "~0.6.2",
-      "istanbul": "~0.2.3",
-      "jasmine-node": "~1.13.0",
+      "grunt-shell": "~0.6.4",
+      "istanbul": "~0.2.4",
+      "jasmine-node": "~1.13.1",
       "sphere-coffeelint": "git://github.com/sphereio/sphere-coffeelint.git#master"
     };
     props.travis = /y/i.test(props.travis);
