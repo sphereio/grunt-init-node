@@ -76,7 +76,8 @@ exports.template = function(grunt, init, done) {
       "grunt-contrib-watch": "~0.5.3",
       "grunt-shell": "~0.6.2",
       "istanbul": "~0.2.3",
-      "jasmine-node": "~1.13.0"
+      "jasmine-node": "~1.13.0",
+      "sphere-coffeelint": "git://github.com/sphereio/sphere-coffeelint.git#master"
     };
     props.travis = /y/i.test(props.travis);
 
