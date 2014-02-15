@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '0.10'
+before_script:
+- npm install jslint -g
+script:
+- jslint template.js
+notifications:
+  hipchat:
+    rooms:
+      secure: H9JfT4ISjvbl4vwdUVgyK6PdiLU0IGivBvtcKv5JNj3NQo5yv1kRqqrOQwU0/CkkAsrgHnxdpAWX4i6CUtkc0uM6cC9F1lwU6MZBjmgMzZnOTHXQ6ealRIE/Rf2ZryYjCOTB33A+3JhvmhnX3mvmG57tPBPuhG6jXkZD60wRqno=
+    template:
+    - '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Compare</a>)'
+    format: html
+    on_success: change
+    on_failure: change
