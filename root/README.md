@@ -1,6 +1,6 @@
 # {%= name %}
 
-{% if (travis) { %}[![Build Status](https://secure.travis-ci.org/{%= git_user %}/{%= git_repo %}.png?branch=master)](http://travis-ci.org/{%= git_user %}/{%= git_repo %}){% } %}{% if (coveralls) { %} [![Coverage Status](https://coveralls.io/repos/{%= git_user %}/{%= git_repo %}/badge.png)](https://coveralls.io/r/{%= git_user %}/{%= git_repo %})%}){% } %} [![Dependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %}) [![devDependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}/dev-status.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %}#info=devDependencies)
+{% if (travis) { %}[![Build Status](https://secure.travis-ci.org/{%= git_user %}/{%= git_repo %}.png?branch=master)](http://travis-ci.org/{%= git_user %}/{%= git_repo %}){% } %}{% if (coveralls) { %} [![Coverage Status](https://coveralls.io/repos/{%= git_user %}/{%= git_repo %}/badge.png)](https://coveralls.io/r/{%= git_user %}/{%= git_repo %}){% } %} [![Dependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %}) [![devDependency Status](https://david-dm.org/{%= git_user %}/{%= git_repo %}/dev-status.png?theme=shields.io)](https://david-dm.org/{%= git_user %}/{%= git_repo %}#info=devDependencies)
 
 
 {%= description %}
