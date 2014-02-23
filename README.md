@@ -1,6 +1,8 @@
 sphere-grunt-init
 =================
 
+[![Build Status](https://travis-ci.org/sphereio/sphere-grunt-init.png?branch=master)](https://travis-ci.org/sphereio/sphere-grunt-init)
+
 This is a project template used for creating sphere node modules using [grunt-init](http://gruntjs.com/project-scaffolding) (scaffolding tool used to automate project creation).
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
