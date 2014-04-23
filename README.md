@@ -23,11 +23,12 @@ git clone git@github.com:sphereio/sphere-grunt-init.git ~/.grunt-init/sphere-nod
 
 At the command-line, create a new directory for the project you want to setup and change to that directory. Now run `grunt-init` command and follow the prompts.
 
-```
+```bash
+# create dir and change into it
 mkdir sphere-node-xyz
 cd sphere-node-xyz/
-grunt-init sphere-node
 
+grunt-init sphere-node
 # or use the path to the template
 grunt-init ~/dev/src/sphere-grunt-init
 ```
