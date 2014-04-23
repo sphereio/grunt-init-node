@@ -38,6 +38,7 @@ _Note that this template will generate files in the current directory, so be sur
 
 ## Project Setup
 
+* run `chmod +x create_config.sh` (make script executable)
 * create `config.js` by running `./create_config.sh`
   * add credentials (used only in local development)
 * configure github/hipchat integration (see project *settings* in github)
