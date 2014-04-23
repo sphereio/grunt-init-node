@@ -47,9 +47,9 @@ _Note that this template will generate files in the current directory, so be sur
   * sphere project credentials
 
     ```bash
-    travis encrypt [xxx] --add SPHERE_PROJECT_KEY
-    travis encrypt [xxx] --add SPHERE_CLIENT_ID
-    travis encrypt [xxx] --add SPHERE_CLIENT_SECRET
+    travis encrypt your_key --add SPHERE_PROJECT_KEY
+    travis encrypt your_id --add SPHERE_CLIENT_ID
+    travis encrypt your_secret --add SPHERE_CLIENT_SECRET
     ```
   * hipchat notifications
 
