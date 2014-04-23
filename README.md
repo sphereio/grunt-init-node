@@ -54,18 +54,5 @@ _Note that this template will generate files in the current directory, so be sur
   * hipchat notifications
 
     ```bash
-    travis encrypt [xxx]@Sphere --add notifications.hipchat.rooms
-    ```
-    
-    Adjust notification settings afterwards:
-    ```yaml
-    notifications:
-      hipchat:
-        rooms:
-          secure: xxx
-        template:
-        - '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Compare</a>)'
-          format: html
-          on_success: change
-          on_failure: change
+    travis encrypt your_token@Sphere --add notifications.hipchat.rooms
     ```
