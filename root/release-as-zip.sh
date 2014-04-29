@@ -2,23 +2,29 @@
 
 set -e
 
-rm -rf lib
-
 BRANCH_NAME='latest'
 
-npm version patch
-git checkout ${BRANCH_NAME}
-git merge master
+set +e
+git branch -D ${BRANCH_NAME}
+set -e
 
+rm -rf lib
+rm -rf node_modules
+
+npm version patch
+git branch ${BRANCH_NAME}
+git checkout ${BRANCH_NAME}
+
+npm install
 grunt build
+rm -rf node_modules
+npm install --production
 git add -f lib/
-libs=$(cat package.json | jq -r '.dependencies' | grep ':' | cut -d: -f1 | tr -d " " | tr -d '"')
-for lib in $libs; do
-    git add -f node_modules/$lib
-done
+git add -f node_modules/
 git commit -m "Update generated code and runtime dependencies."
-git push origin ${BRANCH_NAME}
+git push --force origin ${BRANCH_NAME}
 
 git checkout master
 npm version patch
 git push origin master
+npm install
